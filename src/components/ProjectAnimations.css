@@ -1,0 +1,40 @@
+.imageWrap{
+    width: 80%;
+    padding-top:80%;
+    position: relative;
+}
+
+.imageWrap > img{
+    width: 100%;
+    position: absolute;
+    transition: all .4s ease;
+    top: 0;
+}
+
+.imageWrap > img:nth-child(1){ /* first <img> child of <div> */
+    filter: alpha(opacity=100); /* IE stuff */
+    opacity: 1;
+}
+.imageWrap > img:nth-child(2){ /* second <img> child of <div> */
+    filter: alpha(opacity=0); /* IE stuff */
+    opacity: 0;
+}
+/* hover */
+.imageWrap:hover > img:nth-child(1){ 
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.imageWrap:hover > img:nth-child(2){ 
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.imageWrap:active > img:nth-child(1){ 
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.imageWrap:active > img:nth-child(2){ 
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
